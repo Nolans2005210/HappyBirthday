@@ -798,6 +798,21 @@ h1 {
   color: rgba(122,33,71,0.6);
   font-size: 0.78rem;
 }
+
+/* Custom spacing for the hero action buttons */
+.btn-spacing {
+  gap: 10px;
+}
+
+/* Fallback for older browsers that don't support gap on flex containers */
+@supports not (gap: 1px) {
+  .btn-spacing > .btn {
+    margin-right: 10px;
+  }
+  .btn-spacing > .btn:last-child {
+    margin-right: 0;
+  }
+}
 .wish-card.animate-pop {
   transform-origin: center;
   animation: pop-in 0.28s ease-out both;
